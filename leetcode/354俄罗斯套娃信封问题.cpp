@@ -6,7 +6,7 @@ public:
     int maxEnvelopes(vector<vector<int>>& envelopes) {
     	int n=envelopes.size();
     	sort(envelopes.begin(),envelopes.end(),
-    		[](const vector<int>& a, const vector<int>& b) -> bool{
+    		[](const vector<int>& a, const vector<int>& b){
     			return a[0]==b[0]?a[1]>b[1]:a[0]<b[0];
     		});
     	int dp[n+2],len=0;
